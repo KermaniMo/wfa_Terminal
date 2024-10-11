@@ -1,2 +1,2 @@
 # wfa_Terminal
- 
+As a practice exercise, I developed a project for managing a bus and car terminal. The project includes the essential features of a terminal, and it is implemented using C# and SQL Server. The connection between the application and the database is established through ADO.NET, and operations are performed using stored procedures. This project is designed as a Windows Forms application. 
