@@ -177,6 +177,11 @@ namespace wfa_Terminal.Forms.Sub_Form
             cmb_Type.DataSource = obj_BusinessCarType.GetList();
             cmb_Type.DisplayMember = "TypeName";
             cmb_Type.ValueMember = "CarsTypeID";
+            if (cmb_Type.Items.Count == 0)
+            {
+                MsgBox.Show("لطفا از فرم نوع ماشین،نوع ماشینی را اضافه کنید.");
+                this.Close();
+            }
         }
         //-------------------------------------------
         private string ChangeToPersianDate(string date)

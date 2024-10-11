@@ -158,6 +158,11 @@ namespace wfa_Terminal.Forms.Sub_Form
             cmb_Degree.DataSource = obj_BusinessDegree.GetList();
             cmb_Degree.DisplayMember = "DegreeTitle";
             cmb_Degree.ValueMember = "DegreeID";
+            if (cmb_Degree.Items.Count==0)
+            {
+                MsgBox.Show("لطفا از فرم مدرک،مدرکی را اضافه کنید.");
+                this.Close();
+            }
             //-----------------------
             cmb_LicenseType.Items.Add("پایه یک");
             cmb_LicenseType.Items.Add("پایه دو");

@@ -44,6 +44,11 @@ namespace wfa_Terminal.Forms.Sub_Form
             cmb_SecondProvince.DataSource = obj_BusinessProvince.GetList();
             cmb_SecondProvince.DisplayMember = "ProvinceName";
             cmb_SecondProvince.ValueMember = "ProvinceID";
+            if (cmb_FirstProvince.Items.Count == 0)
+            {
+                MsgBox.Show("لطفا از فرم شهر و استان،شهری را اضافه کنید.");
+                this.Close();
+            }
 
         }
         //-----------------------------------------
@@ -208,6 +213,7 @@ namespace wfa_Terminal.Forms.Sub_Form
                 cmb_FirstCity.DataSource = new BusinessCity().SearchByField("ID_FK_tbl_Province", cmb_FirstProvince.SelectedValue.ToString());
                 cmb_FirstCity.DisplayMember = "CityName";
                 cmb_FirstCity.ValueMember = "CityID";
+               
             }
         }
 

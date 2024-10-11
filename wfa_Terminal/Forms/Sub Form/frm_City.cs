@@ -121,6 +121,7 @@ namespace wfa_Terminal.Forms.Sub_Form
                     dtable.Columns.Add("CityName");
                     dtable.Columns.Add("ID_FK_tbl_Province");
                 }
+                
                 dtable.Rows.Add(txt_City.Text.Trim(),txt_Province.Tag.ToString());
                 dtcity.Rows.Add(-15, txt_City.Text.Trim());
                 dgv_City.DataSource = dtcity;
@@ -151,6 +152,7 @@ namespace wfa_Terminal.Forms.Sub_Form
                         SaveProvince = false;
                         Cleartxt();
                         dgv_City.DataSource = null;
+                        dtable.Columns.Clear();
                     }
                 }
             }
@@ -171,7 +173,7 @@ namespace wfa_Terminal.Forms.Sub_Form
                         SaveProvince = false;
                         Cleartxt();
                         dgv_City.DataSource = null;
-
+                        dtable.Columns.Clear();
                     }
                 }
             }

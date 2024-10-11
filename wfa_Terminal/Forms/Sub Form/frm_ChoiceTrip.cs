@@ -126,7 +126,12 @@ namespace wfa_Terminal.Forms.Sub_Form
             cmb_PayType.ValueMember = "PayTypeID";
             cmb_PayType.DisplayMember = "PayTypeTitle";
             //------------------------------
-            
+            if (cmb_Bank.Items.Count==0 || cmb_PayType.Items.Count==0)
+            {
+                MsgBox.Show("لطفا نوع پرداخت یا بانک را از فرم هایی با همین نام اضافه کنید.");
+                this.Close();
+            }
+
         }
         ////-------------------------------------------
 
